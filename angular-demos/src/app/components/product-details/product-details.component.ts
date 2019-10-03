@@ -11,10 +11,6 @@ import { CartService } from 'src/app/services/cart.service';
 export class ProductDetailsComponent implements OnInit {
   product;
 
-  addToCart(product) {
-    window.alert(' Product has been added to cart ');
-    this.cartService.addToCart(product);
-  }
 
   constructor(
     private route: ActivatedRoute,
@@ -28,6 +24,13 @@ export class ProductDetailsComponent implements OnInit {
     });
 
 
+
+
+  }
+  addToCart(product) {
+    window.alert(' Product has been added to cart ');
+    console.log('addToCart from product list');
+    this.cartService.addToCart(product);
   }
 
 }
