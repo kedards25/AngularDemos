@@ -28,4 +28,8 @@ export class CartService {
   getShippingPrices() {
     return this.client.get('assets/shipping.json');
   }
+
+  getUserData() {
+    return this.client.get('http://localhost:8080/users');
+  }
 }
